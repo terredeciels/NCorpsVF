@@ -1,7 +1,6 @@
-package ncorps;
+package ncorps_bd;
 
 import representation.ImgNCorps;
-import representation.Output;
 
 import java.io.IOException;
 

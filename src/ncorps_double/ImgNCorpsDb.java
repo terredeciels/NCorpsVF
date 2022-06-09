@@ -1,24 +1,19 @@
-package representation;
-
-
-
-import ncorps_bd.Calculs;
+package ncorps_double;
 
 import javax.swing.*;
 import java.awt.*;
-import java.math.BigDecimal;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import static ncorps_bd.Parametres.Tmax;
 
 
-public class ImgNCorps extends Canvas {
-    private final Calculs calculs;
+public class ImgNCorpsDb extends Canvas {
+    private final CalculsDb calculs;
     int WIDTH = 600;
     int HEIGHT = 600;
 
-    public ImgNCorps() {
-        calculs = new Calculs();
+    public ImgNCorpsDb() {
+        calculs = new CalculsDb();
         JFrame frame = new JFrame();
         frame.setSize(WIDTH, HEIGHT);
         frame.add(this);
@@ -41,10 +36,10 @@ public class ImgNCorps extends Canvas {
         for (int n = 0; n < 3; n++) {
             for (int t = 0; t < Tmax; t++) {
                 g.setColor(tCoul[n]);
-                BigDecimal X = calculs.ncorps[n][t].param[0];
-                BigDecimal Y = calculs.ncorps[n][t].param[1];
-                int x = X.intValue();
-                int y = Y.intValue();
+                double X = calculs.ncorps[n][t].param[0];
+                double Y = calculs.ncorps[n][t].param[1];
+                int x = (int) X;
+                int y = (int) Y;
                 g.drawOval(x, y, 2, 2);
             }
         }

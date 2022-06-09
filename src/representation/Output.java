@@ -1,7 +1,8 @@
 package representation;
 
-import ncorps.Calculs;
-import ncorps.Parametres;
+import ncorps_bd.Calculs;
+import ncorps_bd.Corps;
+import ncorps_bd.Parametres;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -40,7 +41,7 @@ public class Output implements Parametres {
     }
 
     void toFile(int ncoord) throws IOException {
-        Calculs.Corps[][] I = calculs.ncorps;
+        Corps[][] I = calculs.ncorps;
         for (int t = 0; t < Tmax; t++) {
             for (int n = 0; n < NbCorps; n++) {
                 W.write(I[n][t].param[ncoord]);
@@ -51,7 +52,7 @@ public class Output implements Parametres {
     }
 
     void toFile2(int numcorps) throws IOException {
-        Calculs.Corps[][] I = calculs.ncorps;
+        Corps[][] I = calculs.ncorps;
         for (int t = 0; t < Tmax; t++) {
             for (int c = 0; c < 3; c++) {
                 W.write(I[numcorps][t].param[c]);
@@ -62,7 +63,7 @@ public class Output implements Parametres {
     }
 
     void convert3DTo2DToInt(int k) {
-        Calculs.Corps[][] I = calculs.ncorps;
+        Corps[][] I = calculs.ncorps;
 
         for (int n = 0; n < NbCorps; n++) {
             BigDecimal[] param = I[n][k].param;
