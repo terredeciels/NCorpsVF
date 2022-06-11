@@ -36,8 +36,8 @@ public class ImgNCorpsDb extends Canvas {
         for (int n = 0; n < 3; n++) {
             for (int t = 0; t < Tmax; t++) {
                 g.setColor(tCoul[n]);
-                double X = calculs.ncorps[n][t].param[0];
-                double Y = calculs.ncorps[n][t].param[1];
+                double X = calculs.ncorps[n][t].p[0];
+                double Y = calculs.ncorps[n][t].p[1];
                 int x = (int) X;
                 int y = (int) Y;
                 g.drawOval(x, y, 2, 2);

@@ -2,13 +2,13 @@ package ncorps_bd;
 
 import java.math.BigDecimal;
 
-public class Calculs extends Init  {
+public class Calculs extends Init {
 
     public final Corps[][] ncorps;
 
     public Calculs() {
+        // initialisation();
         initialisation();
-       // initialisation(0);
         ncorps = NCorpsT0;
         for (int k = 0; k < Tmax - 1; k++)
             for (int n = 0; n < 3; n++) { //corps n

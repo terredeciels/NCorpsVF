@@ -1,7 +1,6 @@
 package representation;
 
 
-
 import ncorps_bd.Calculs;
 
 import javax.swing.*;

@@ -5,11 +5,11 @@ import java.math.BigDecimal;
 public class Corps {
 
 
-        public BigDecimal[] param;
+    public BigDecimal[] param;
 
-        public Corps() {
-            param = new BigDecimal[6];
-        }
+    public Corps() {
+        param = new BigDecimal[6];
+    }
 
 
 }

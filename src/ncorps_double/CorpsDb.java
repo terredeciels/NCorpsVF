@@ -3,11 +3,11 @@ package ncorps_double;
 public class CorpsDb {
 
 
-        public double[] param;
+    public double[] p;
 
-        public CorpsDb() {
-            param = new double[6];
-        }
+    public CorpsDb() {
+        p = new double[6];
+    }
 
 
 }
